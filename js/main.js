@@ -34,7 +34,23 @@ $(document).ready( function () {
         arrows: false,
         dots: true,
         pauseOnFocus: false,
-        pauseOnHover: false
+        pauseOnHover: false,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            }
+        ]
     })
 
     $('.slide-marcas').slick({
@@ -47,15 +63,22 @@ $(document).ready( function () {
         arrows: false,
         speed: 5000,
         pauseOnFocus: false,
-          pauseOnHover: false,
+        pauseOnHover: false,
         responsive: [
             {
-             breakpoint: 992,
-             settings: {
+                breakpoint: 992,
+                settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3
-             }
-          }
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            }
         ]
     })
 
