@@ -339,6 +339,9 @@ body {
 	}
 	.slick-dots {
 		padding: .5em 0;
+		@media (max-width: 768px) {
+			padding: 0;
+		}
 	}
 	.banner-down {
 		display: flex;
