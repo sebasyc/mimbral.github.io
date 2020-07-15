@@ -10,6 +10,100 @@ body {
     background-color: $blue;
     color: white;
 }
+body {
+	&.cms-index-index {
+		&.cms-home {
+			.backgroundWhite {
+				background: transparent !important;
+			}
+		}
+	}
+}
+.container {
+	@media (min-width: 768px) {
+		width: 1170px !important;
+	}
+	@media (max-width: 480px) {
+		padding: 0;
+	}
+}
+.wrapper {
+	background-color: transparent !important;
+}
+.footer-container {
+	background-color: #F5F5F5 !important;
+}
+.col-main {
+	.widget {
+		padding-top: 0 !important;
+	}
+}
+.footer-info {
+	border-top: none !important;
+}
+.box-product {
+	.price-box {
+		.container-regular-price {
+			.regular-price-label {
+				display: none;
+			}
+		}
+		.price {
+			display: inline-block;
+			padding: .25em 0 0;
+			font-size: 30px;
+			line-height: normal;
+			color: $red;
+			font-weight: 900;
+		}
+		p {
+			&.old-price {
+				display: flex;
+				margin-bottom: -12px !important;
+				margin-top: .5em !important;
+				.price-label {
+					font-size: 12px;
+					color: #333333;
+					line-height: normal;
+					font-weight: 700;
+					text-transform: unset;
+				}
+				.price {
+					display: block;
+					padding: 0 .15em;
+					font-size: 12px;
+					color: #333333;
+					line-height: normal;
+					font-weight: 700;
+				}
+				.old-medida {
+					font-size: 12px;
+					color: #333333;
+					line-height: normal;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}
+.labelProducto {
+	&.discount-label {
+		width: 55px;
+		height: 55px;
+		background-color: $orange;
+		border-radius: 100%;
+		left: auto;
+		top: 5px;
+		right: 5px;
+		min-width: auto;
+		font-size: 18px;
+		padding: 14px 0 0;
+		small {
+			display: block;
+			font-size: 12px;
+		}
+	}
+}
 
 .box-titles {
 	display: flex;
@@ -23,6 +117,7 @@ body {
 		font-size: 30px;
 		font-weight: 700;
 		color: #333333;
+		text-transform: unset;
 		@media (max-width: 480px) {
 			font-size: 25px;
 		}
@@ -209,9 +304,10 @@ body {
 	display: flex;
 	justify-content: center;
 	padding: 1em 0 0;
+	margin: 0 !important;
 	bottom: 0;
 	li {
-		margin: 0 .25em;
+		margin: 0 .25em !important;
 		button {
 			padding: 0;
 			&:before {
@@ -580,9 +676,12 @@ body {
 }
 
 .cont-info {
-	padding: 0 0 3em;
+	padding: 0 0 3.5em;
 	@media (max-width: 480px) {
 		padding: 0 0 2em;
+	}
+	.box-titles {
+		padding: 2em 0 2.5em;
 	}
 	.info-row {
 		display: flex;
@@ -716,6 +815,128 @@ body {
 			&:hover {
 				background-color: $blue;
 				border-color: $blue;
+			}
+		}
+	}
+}
+
+.cont-marcas {
+	padding: 3em 0;
+	.marcas-title {
+		padding: 0 0 2em;
+		text-align: center;
+		h1 {
+			position: relative;
+			margin: 0 0 1em;
+			padding: 0;
+			font-size: 30px;
+			color: #333333;
+			text-transform: uppercase;
+			font-weight: bold;
+			&:after {
+				content: "";
+				position: absolute;
+				width: 70px;
+				height: 6px;
+				background-color: #D0011B;
+				border-radius: 50px;
+				bottom: -10px;
+				@include center-x;
+			}
+		}
+		p {
+			margin: 0;
+			padding: 0;
+			font-size: 14px;
+			color: #666666;
+		}
+	}
+	.row-marcas {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -15px;
+		@media (max-width: 480px) {
+			margin: 0 -5px;
+		}
+		&__col {
+			width: 20%;
+			padding: 0 15px 25px;
+			@media (max-width: 991px) {
+				width: 25%;
+			}
+			@media (max-width: 768px) {
+				width: 33.33333%;
+			}
+			@media (max-width: 480px) {
+				width: 50%;
+				padding: 0 5px 20px;
+			}
+			.box-marca {
+				position: relative;
+				display: block;
+				border: 1px solid #cccccc;
+				border-radius: 1em;	
+				transition: .3s;
+				&__img {
+					position: relative;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					height: 190px;
+					padding: 1em;
+					border-radius: 1em;
+					overflow: hidden;
+					opacity: .5;
+					filter: grayscale(100%);
+					transition: .3s;
+					@media (max-width: 1199px) {
+						height: 150px;
+					}
+					@media (max-width: 768px) {
+						opacity: 1;
+						filter: none;
+					}
+					img {
+						width: 100%;
+					}
+				}
+				&__btn {
+					position: absolute;
+					display: block;
+					width: 130px;
+					padding: .35em 1.5em;
+					background-color: #D0011B;
+					border-radius: 50px;
+					font-size: 12px;
+					color: white;
+					text-align: center;
+					font-weight: bold;
+					opacity: 0;
+					transition: .3s;
+					bottom: -20px;
+					@include center-x;
+					@media (max-width: 768px) {
+						bottom: -10px;
+						opacity: 1;
+					}
+				}
+				&:hover {
+					transform: translate(0,-3px);
+					box-shadow: 0 3px 20px rgba(0,0,0,.15);
+					@media (max-width: 768px) {
+						transform: none;
+					}
+					.box-marca {
+						&__img {
+							opacity: 1;
+							filter: none;
+						}
+						&__btn {
+							bottom: -10px;
+							opacity: 1;
+						}
+					}
+				}
 			}
 		}
 	}
