@@ -84,6 +84,20 @@ body {
 				}
 			}
 		}
+		&.special-price-box {
+			p {
+				&.special-price {
+					.price {
+						font-size: 16px !important;
+						padding: 0 !important;
+						margin-top: -5px;
+						.unidad {
+							font-size: 14px !important;
+						}
+					}
+				}
+			}
+		}
 	}
 }
 .labelProducto {
