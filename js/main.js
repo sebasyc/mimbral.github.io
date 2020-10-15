@@ -1,4 +1,16 @@
+$(window).on("load", function(e) {
+	$(".cont-loader").fadeOut('slow')
+})
+
 $(document).ready( function () {
+
+    $(window).scroll(function() {
+		if($(this).scrollTop() > 150) {
+			$('header').addClass('fixed')
+		} else if ($(this).scrollTop() < 10) {
+			$('header').removeClass('fixed')
+		}
+	})
 
     $('.slide-home').slick({
         infinite: true,
