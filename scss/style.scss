@@ -330,6 +330,41 @@ header {
 	}
 }
 
+.head-home {
+	padding: .75em 0;
+	.row-head-home {
+		display: flex;
+		align-items: center;
+		&__col {
+			padding-right: 1.5em;
+			.btn-head-home {
+				display: flex;
+				align-items: center;
+				color: $blue;
+				text-decoration: none;
+				&__icon {
+					display: block;
+				}
+				&__txt {
+					display: block;
+					padding-left: .5em;
+					h3 {
+						margin: 0;
+						font-size: 1.125em;
+						font-style: italic;
+						font-weight: 900;
+					}
+					p {
+						padding: 0;
+						margin: 0;
+						font-size: .813em;
+					}
+				}
+			}
+		}
+	}
+}
+
 .container {
 	@media (min-width: 768px) {
 		width: 1170px !important;
